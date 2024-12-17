@@ -1,0 +1,15 @@
+import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn.ensemble import RandomForestRegressor  # ou un autre modèle de votre choix
+import joblib  # pour sauvegarder le modèle
+import os
+
+# Définir le répertoire de travail
+working_directory = r'C:\Users\SAMSON\Documents\ENSAE\co2_prediction_app'
+os.chdir(working_directory)  # Changer le répertoire de travail
+
+# Charger les données
+data = pd.read_csv('Final_data.csv')  # Assurez-vous que le fichier est dans le répertoire de travail
+
+# Afficher les colonnes disponibles
+print(data.columns)
